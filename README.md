@@ -1,6 +1,6 @@
-## Espresso
+## Current
 - [sesslog](/sess-log)🧘🏻‍♂️
 
-## Seasonal
+## Previous
 - [interview blog](/izea-blog/)📓
 - [school project - FlyAR](/FlyAR/) 🚁
