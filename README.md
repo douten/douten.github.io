@@ -1,7 +1,7 @@
-## Current
-- r10⏰
+## Limited Time 🍖
+- R10 ⏰
 
-## Previous
+## Out of Season 🍁
 - [sesslog](/sess-log)🧘🏻‍♂️
 - [interview blog](/izea-blog/)📓
 - [school project - FlyAR](/FlyAR/) 🚁
