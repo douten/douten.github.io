@@ -33,6 +33,7 @@ a {
   max-height: calc(100dvh - 20px);
   overflow: scroll;
   margin: 10px;
+  width: 100%;
 
   & > div {
     align-items: center;
@@ -98,7 +99,7 @@ a {
     line-height: 1.5;
   }
 
-  details {
+  /* details {
     width: 100%;
     transition: height 0.3s ease;
   }
@@ -121,5 +122,5 @@ a {
   details[open]::details-content {
     height: auto;
     opacity: 1;
-  }
+  } */
 }
