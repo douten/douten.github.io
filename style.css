@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Open Sans Condensed ExtraBold Italic";
+  src: url("fonts/OpenSans_Condensed-ExtraBoldItalic.ttf");
+}
+
+:root {
+  interpolate-size: allow-keywords;
+}
+
+body {
+  background: #9c66b9;
+  background-image: url("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  height: 100dvh;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+a {
+  color: white;
+}
+
+.board {
+  max-width: 600px;
+  width: 60dvw;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  border: 0;
+
+  & > div {
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    font-weight: bold;
+    min-height: 50px;
+    justify-content: center;
+    align-items: start;
+    padding: 12px 30px;
+    text-transform: lowercase;
+    cursor: pointer;
+    box-sizing: border-box;
+    line-height: 50px;
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease,
+      opacity 0.3s ease;
+
+    &:hover {
+      backdrop-filter: blur(25px) saturate(200%) brightness(250%) opacity(60%);
+    }
+
+    &.title {
+      font-family: "Open Sans Condensed ExtraBold Italic", sans-serif;
+      font-size: 48px;
+      font-weight: normal;
+      text-transform: uppercase;
+      cursor: default;
+    }
+
+    /* From Yellow to Orange */
+    &:nth-child(1) {
+      background-color: #ffcc00d9;
+      border-radius: 8px 8px 0 0;
+    }
+    &:nth-child(2) {
+      background-color: #fcad07d9;
+    }
+    &:nth-child(3) {
+      background-color: #fc9a0ed9;
+    }
+    &:nth-child(4) {
+      background-color: #fc8715d9;
+    }
+    &:nth-child(5) {
+      background-color: #fc741cd9;
+    }
+    &:nth-child(6) {
+      background-color: #fc6123d9;
+      border-radius: 0 0 8px 8px;
+    }
+  }
+
+  .title {
+    text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    font-size: 16px;
+    text-transform: none;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  details {
+    width: 100%;
+    transition: height 0.3s ease;
+  }
+
+  summary {
+    width: 100%;
+  }
+
+  details[open] {
+    transition: height 0.3s ease;
+  }
+
+  details::details-content {
+    height: 0;
+    transition: block-size 0.3s, content-visibility 0.3s, opacity 0.2s;
+    transition-behavior: allow-discrete;
+    opacity: 0;
+  }
+
+  details[open]::details-content {
+    height: auto;
+    opacity: 1;
+  }
+}
