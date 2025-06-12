@@ -73,39 +73,59 @@ details > summary:first-of-type {
   align-items: center;
 }
 
+/* Accordian Closed State */
 details summary {
   height: 50px;
+  margin-top: 0;
   transition: height 0.3s ease;
+  gap: 5px;
 
   .title {
     display: initial;
+    left: 0;
     opacity: 1;
     position: relative;
-    transition: opacity 0.3s ease;
+    text-transform: lowercase;
+    transition: opacity 0.3s ease, left 0.3s ease;
   }
 
   .close {
-    display: initial;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 0.3s ease;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0);
+    display: flex;
+    padding: 0;
+    position: relative;
+    top: 1px;
+    transform: rotate(0deg);
+    transition: transform 0.4s ease, border 0.4s ease, padding 0.4s ease;
+
+    img {
+      width: 18px;
+      height: 18px;
+      transition: width 0.4s ease, height 0.4s ease;
+    }
   }
 }
 
+/* Accordian Open State */
 details[open] summary {
   height: 30px;
+  margin-top: 10px;
 
   .title {
     opacity: 0;
+    left: -20%;
   }
 
   .close {
-    left: 0;
     opacity: 1;
+    padding: 5px;
+    transform: rotate(135deg);
+    border: 2px solid rgba(255, 255, 255, 0.9);
 
     img {
-      width: 24px;
-      height: 24px;
+      width: 12px;
+      height: 12px;
     }
   }
 }
@@ -137,7 +157,6 @@ details[open] summary {
   justify-content: center;
   min-height: 50px;
   padding: 12px 30px;
-  text-transform: lowercase;
   transition: backdrop-filter 0.3s ease, background-color 0.3s ease,
     opacity 0.3s ease;
 
@@ -204,6 +223,13 @@ details[open] summary {
   }
 }
 
+.horizontal-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
 .tech {
   list-style: none;
   padding: 0;
@@ -219,8 +245,12 @@ details[open] summary {
   }
 }
 
-.resume-button {
+.download-btn {
   margin-top: 25px;
-  display: inline-block;
-  line-height: 1;
+  display: inline-flex;
+
+  img[src$=".svg"] {
+    position: relative;
+    top: -1px;
+  }
 }
