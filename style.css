@@ -33,9 +33,19 @@ img[src$=".svg"] {
   height: 15px;
 }
 
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  border-radius: 8px;
+}
+
 button,
 [data-style="button"] {
-  background-color: #fc6123;
+  background-color: #1497ae;
   text-decoration: none;
   border: none;
   border-radius: 4px;
@@ -51,7 +61,7 @@ button,
   gap: 5px;
 
   &:hover {
-    background-color: #fc741c;
+    background-color: #0f7c8a;
   }
 }
 
@@ -68,6 +78,10 @@ details,
 summary {
   width: 100%;
   position: relative;
+}
+
+summary {
+  cursor: pointer;
 }
 
 details > summary:first-of-type {
@@ -127,7 +141,6 @@ details summary {
 
 /* Accordian Open State */
 details[open] summary {
-  /* height: 30px; */
   margin-top: 10px;
 
   .title {
@@ -168,7 +181,6 @@ details[open] summary {
   align-items: center;
   align-items: start;
   box-sizing: border-box;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   font-size: 32px;
@@ -191,7 +203,6 @@ details[open] summary {
   &.title {
     font: normal 48px "Open Sans Condensed ExtraBold Italic", sans-serif;
     text-transform: uppercase;
-    cursor: default;
     text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.3);
   }
 
@@ -247,29 +258,23 @@ details[open] summary {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 5px;
+
+  & + * {
+    margin-top: 15px;
+  }
 }
 
-.tech {
+.tech-list {
   list-style: none;
   padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 5px;
+  margin-bottom: 15px;
 
   img[src$=".svg"] {
     height: 20px;
     width: auto;
-  }
-}
-
-.download-btn {
-  margin-top: 25px;
-  display: inline-flex;
-
-  img[src$=".svg"] {
-    position: relative;
-    top: -1px;
   }
 }

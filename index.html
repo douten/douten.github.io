@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minh•Devs</title>
-    <link rel="stylesheet" href="style.css?ok=79" />
+    <link rel="stylesheet" href="style.css?ok=89" />
   </head>
   <body>
     <div class="board">
@@ -23,7 +23,7 @@
             keeping things DRY 🌵
           </p>
           <p>Some technologies I regularly use:</p>
-          <div class="tech">
+          <div class="tech-list">
             <img src="svg/js.svg" alt="JavaScript" />
             <img src="svg/ts.svg" alt="TypeScript" />
             <img src="svg/react.svg" alt="React" />
@@ -76,7 +76,7 @@
           </div>
         </details>
       </div>
-      <div class="title">Recent Commits</div>
+      <div class="title">Commits</div>
       <div>
         <details>
           <summary>
@@ -84,14 +84,20 @@
             <span class="title">Yapa 🐓</span>
           </summary>
           <p>
-            Yapa is a minimal podomoro timer so you can focus on your tasks. It
-            features customizing your pomodoro with your own set of timers, with
-            color and names. Start, pause, reset, and navigate through your
-            timers with ease.
+            Yapa is a minimal podomoro timer so you can focus on your tasks.
+            Customize your own set of timers, with color and names. Bundled with
+            standard timer controllers.
           </p>
-          <a href="/yapa" data-style="button" target="_blank"
-            >View <img src="svg/arrow.up.forward.square.svg" data-style="icon"
-          /></a>
+          <div class="tech-list">
+            <img src="svg/ts.svg" alt="TypeScript" />
+            <img src="svg/react.svg" alt="React" />
+          </div>
+          <div class="horizontal-list">
+            <a href="/yapa" data-style="button" target="_blank"
+              >Try it!
+              <img src="svg/arrow.up.forward.square.svg" data-style="icon"
+            /></a>
+          </div>
         </details>
       </div>
       <div>
@@ -101,9 +107,33 @@
             <span class="title">Jetty</span>
           </summary>
           <p>
-            A small extension to show product previews on Jetpens.com as a
-            modal.
+            A small FireFox extension to show product previews on Jetpens.com in
+            a modal. I got tired of using browser navigation to preview
+            products.
           </p>
+          <div class="tech-list">
+            <img src="svg/js.svg" alt="JavaScript" />
+          </div>
+          <div class="horizontal-list">
+            <a
+              href="https://addons.mozilla.org/en-US/firefox/addon/jetty/"
+              data-style="button"
+              target="_blank"
+              rel="noopener"
+              >View Extension
+              <img src="svg/arrow.up.forward.square.svg" data-style="icon"
+            /></a>
+          </div>
+          <video controls preload="auto" poster="images/jetty-preview.png">
+            <source src="videos/jetty-vf.mp4" type="video/mp4" />
+            <p>
+              Your browser doesn't support HTML video.
+              <a href="videos/jetty-vf.mp4" download="videos/jetty-vf.mp4"
+                >Download the video</a
+              >
+              instead.
+            </p>
+          </video>
         </details>
       </div>
     </div>
