@@ -26,6 +26,8 @@ a {
   color: white;
 }
 
+/* Styled Tags */
+
 img[src$=".svg"] {
   width: 15px;
   height: 15px;
@@ -61,6 +63,7 @@ p {
   line-height: 1.75;
 }
 
+/* Reset Details/Summary */
 details,
 summary {
   width: 100%;
@@ -73,6 +76,20 @@ details > summary:first-of-type {
   align-items: center;
 }
 
+/* Animation of Accordian Height */
+details::details-content {
+  overflow: hidden;
+  height: 0;
+  /* Enable transitioning of `content-visibility` */
+  transition: height 0.3s, content-visibility 0.3s;
+  transition-behavior: allow-discrete;
+}
+
+details[open]::details-content {
+  height: auto;
+}
+
+/* Mainly summary header Animation */
 /* Accordian Closed State */
 details summary {
   height: 50px;
@@ -90,14 +107,15 @@ details summary {
   }
 
   .close {
-    border-radius: 50%;
+    border-radius: 20%;
     border: 2px solid rgba(255, 255, 255, 0);
     display: flex;
     padding: 0;
     position: relative;
     top: 1px;
     transform: rotate(0deg);
-    transition: transform 0.4s ease, border 0.4s ease, padding 0.4s ease;
+    transition: transform 0.4s ease, border 0.4s ease, padding 0.4s ease,
+      border-radius 0.4s ease;
 
     img {
       width: 18px;
@@ -109,16 +127,17 @@ details summary {
 
 /* Accordian Open State */
 details[open] summary {
-  height: 30px;
+  /* height: 30px; */
   margin-top: 10px;
 
   .title {
     opacity: 0;
-    left: -20%;
+    left: -10%;
   }
 
   .close {
     opacity: 1;
+    border-radius: 50%;
     padding: 5px;
     transform: rotate(135deg);
     border: 2px solid rgba(255, 255, 255, 0.9);
